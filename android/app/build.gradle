@@ -5,6 +5,7 @@ apply plugin: "kotlin-android"
 apply plugin: "com.google.gms.google-services"
 
 android {
+    namespace "com.example.toollife" // <-- ISSO é obrigatório para Flutter moderno
     compileSdkVersion 34
 
     defaultConfig {
@@ -23,10 +24,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.10"
-    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.10"
+    implementation "androidx.multidex:multidex:2.0.1"
 }
-
