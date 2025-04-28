@@ -1,0 +1,7 @@
+defaultConfig {
+    applicationId "com.example.toollife"
+    minSdkVersion 21
+    targetSdkVersion 34
+    versionCode flutterVersionCode.toInteger()
+    versionName flutterVersionName
+}
