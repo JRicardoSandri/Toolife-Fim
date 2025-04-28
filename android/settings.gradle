@@ -1,0 +1,4 @@
+// Arquivo: android/settings.gradle
+
+rootProject.name = 'toollife'
+include ':app'
