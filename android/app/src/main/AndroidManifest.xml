@@ -3,8 +3,7 @@
 
     <application
         android:label="ToolLife"
-        android:icon="@mipmap/ic_launcher"
-        android:name="io.flutter.app.FlutterApplication">
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name="io.flutter.embedding.android.FlutterActivity"
             android:exported="true"
