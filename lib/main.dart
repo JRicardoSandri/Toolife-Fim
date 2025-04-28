@@ -1,28 +1,36 @@
-name: toollife
-description: Projeto ToolLife de manutenção clínica.
-publish_to: "none"
-version: 1.0.0+1
+import 'package:flutter/material.dart';
 
-environment:
-  sdk: ">=3.1.0 <4.0.0"
+void main() {
+  runApp(const ToolLifeApp());
+}
 
-dependencies:
-  flutter:
-    sdk: flutter
-  cupertino_icons: ^1.0.2
-  firebase_core: ^2.24.0
-  firebase_auth: ^4.14.0
-  cloud_firestore: ^4.13.0
+class ToolLifeApp extends StatelessWidget {
+  const ToolLifeApp({Key? key}) : super(key: key);
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'ToolLife',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const HomePage(),
+    );
+  }
+}
 
-flutter:
-  uses-material-design: true
-  assets:
-    - assets/logo.png
-  fonts:
-    - family: Montserrat
-      fonts:
-        - asset: assets/fonts/Montserrat-Regular.ttf
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Bem-vindo ao ToolLife'),
+      ),
+      body: const Center(
+        child: Text('Projeto criado e corrigido!'),
+      ),
+    );
+  }
+}
